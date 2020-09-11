@@ -1,0 +1,16 @@
+example.com {
+    respond "Hello, privacy!"
+}
+
+https://example.com/rapp/* {
+    redir http://example.com/rapp/ temporary
+}
+
+http://example.com/rapp/* {
+    reverse_proxy rapphost.local:80
+}
+
+secure.example.com {
+    reverse_proxy apphost.local:7000
+}
+

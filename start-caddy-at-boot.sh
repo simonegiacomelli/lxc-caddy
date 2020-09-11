@@ -1,0 +1,1 @@
+crontab -l > file; echo "@reboot /usr/local/bin/caddy-start.sh" >> file; crontab file; rm file;
